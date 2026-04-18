@@ -1,4 +1,4 @@
-# 🎨 Proyectos de Computación Gráfica 💻
+# 🎨 Taller VI de Computación Gráfica 💻
 
 ¡Bienvenido a mi repositorio de prácticas! Aquí documento mi progreso en lógica de programación y desarrollo web, aplicando conceptos de algoritmos y estructuras de datos.
 
@@ -11,11 +11,11 @@
 ### 🧩 Desafíos Resueltos
 | Ejercicio | Descripción | Estado |
 | :--- | :--- | :---: |
-| **01** | [cite_start]Determinación de **Números Perfectos** [cite: 3] | ✅ |
-| **03** | [cite_start]**Inversión de dígitos** (Sin usar strings) [cite: 11] | 🔄 |
-| **04** | [cite_start]Verificador de **Palíndromos** [cite: 13] | ⚖️ |
-| **06** | [cite_start]Conversor **Decimal a Binario** (Lógica pura) [cite: 17] | 🔢 |
-| **08** | [cite_start]**Menú Interactivo** con `while` y `switch` [cite: 21] | 🖱️ |
+| **01** | Determinación de **Números Perfectos** | ✅ |
+| **03** | **Inversión de dígitos** (Sin usar strings) | 🔄 |
+| **04** | Verificador de **Palíndromos** | ⚖️ |
+| **06** | Conversor **Decimal a Binario** (Lógica pura) | 🔢 |
+| **08** | **Menú Interactivo** con `while` y `switch`| 🖱️ |
 
 ---
 
