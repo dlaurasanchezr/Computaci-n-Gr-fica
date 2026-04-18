@@ -1,0 +1,118 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0d0f14;
+  color: #c8d0e8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background-color: #13161e;
+  border: 1px solid #1f2433;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.card.wide {
+  max-width: 520px;
+}
+
+h2 {
+  color: #00e5a0;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #1f2433;
+}
+
+label {
+  display: block;
+  font-size: 0.75rem;
+  color: #5a6480;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  margin-top: 0.8rem;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  background-color: #0d0f14;
+  border: 1px solid #3a4060;
+  border-radius: 6px;
+  padding: 0.55rem 0.85rem;
+  color: #e0ff60;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #00e5a0;
+}
+
+input::placeholder {
+  color: #3a4060;
+}
+
+select {
+  cursor: pointer;
+}
+
+button {
+  margin-top: 1.2rem;
+  background-color: #00e5a0;
+  color: #0d0f14;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1.4rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #00ffb3;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.output {
+  margin-top: 1rem;
+  background-color: #080a10;
+  border: 1px solid #1f2433;
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  min-height: 60px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.ok   { color: #00e5a0; }   
+.warn { color: #e0ff60; }   
+.err  { color: #ff5566; }   
+.dim  { color: #5a6480; }   
+.row  { color: #c8d0e8; }  
