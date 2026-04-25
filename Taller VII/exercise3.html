@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 3 — Carrusel | Taller 7</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="exercise3.css" />
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-bootstrap-fill me-2"></i>Taller 7 · <span>Exercise 3</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav3" aria-controls="nav3" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav3">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#principal">Principal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#fade">Fade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#thumbs">Miniaturas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero fade-up">
+  <div class="container">
+    <span class="hero-tag">Ejercicio 3</span>
+    <h1>Carrusel de Imágenes <span>Personalizado</span></h1>
+    <p>Cuatro variantes del componente Carousel de Bootstrap 5 con estilos y funcionalidades propias</p>
+  </div>
+</header>
+
+<main class="py-5">
+<div class="container">
+
+  <section class="carousel-section" id="principal">
+    <div class="section-label">
+      <span class="section-num">01</span>
+      <div>
+        <h4>Carrusel Principal</h4>
+        <p>
+          Transición deslizante · Auto-play · Controles personalizados ·
+          Indicadores · Caption con botón de acción.<br>
+          <code>data-bs-ride</code> · <code>carousel-indicators</code> · <code>carousel-caption</code>
+        </p>
+      </div>
+    </div>
+
+    <div id="carousel1" class="carousel slide c-carousel" data-bs-ride="carousel"
+         data-bs-interval="4500" data-bs-pause="hover">
+
+      <div class="carousel-indicators c-indicators">
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0"
+                class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+
+      <div class="carousel-inner c-carousel__inner">
+
+        <div class="carousel-item active">
+          <div class="c-slide c-slide--1">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">Framework</span>
+              <h3>Bootstrap 5</h3>
+              <p>El framework front-end más popular del mundo para diseño responsivo y moderno.</p>
+              <a href="exercise1.html" class="btn c-caption__btn">Ver Exercise 1 <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="c-slide c-slide--2">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">Grid System</span>
+              <h3>Diseño Responsivo</h3>
+              <p>12 columnas que se adaptan a cualquier pantalla con una sola línea de código.</p>
+              <a href="exercise1.html" class="btn c-caption__btn">Ver Responsive <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="c-slide c-slide--3">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">Componentes</span>
+              <h3>+20 Componentes UI</h3>
+              <p>Badges, Alerts, Buttons, Cards, Progress, Accordion y muchos más listos para usar.</p>
+              <a href="exercise2.html" class="btn c-caption__btn">Ver Componentes <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="c-slide c-slide--4">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">JavaScript</span>
+              <h3>Sin jQuery</h3>
+              <p>Bootstrap 5 usa JavaScript nativo moderno. Más liviano, más rápido, más eficiente.</p>
+              <a href="#fade" class="btn c-caption__btn">Siguiente carrusel <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="c-slide c-slide--5">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">CSS</span>
+              <h3>Variables &amp; Sass</h3>
+              <p>Personaliza colores, tipografía y espaciado con variables CSS o Sass en segundos.</p>
+              <a href="#thumbs" class="btn c-caption__btn">Ver miniaturas <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev c-ctrl" type="button"
+              data-bs-target="#carousel1" data-bs-slide="prev">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-left"></i></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next c-ctrl" type="button"
+              data-bs-target="#carousel1" data-bs-slide="next">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-right"></i></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+
+    </div>
+
+    <div class="c-timebar"><div class="c-timebar__fill" id="timebar1"></div></div>
+
+    <div class="c-extra-controls">
+      <button class="c-play-btn" id="playPause1" title="Pausar">
+        <i class="bi bi-pause-fill"></i>
+      </button>
+      <span class="c-counter">
+        Slide <span id="current1">1</span> / 5
+      </span>
+    </div>
+
+  </section>
+
+  <section class="carousel-section" id="fade">
+    <div class="section-label">
+      <span class="section-num">02</span>
+      <div>
+        <h4>Transición Fade</h4>
+        <p>
+          Clase Bootstrap: <code>carousel-fade</code><br>
+          En lugar de deslizar, los slides hacen un fundido (cross-fade).
+          Indicadores en forma de línea, caption centrado y sin controles laterales.
+        </p>
+      </div>
+    </div>
+
+    <div id="carousel2" class="carousel carousel-fade c-carousel c-carousel--compact"
+         data-bs-ride="carousel" data-bs-interval="3500">
+
+      <div class="carousel-indicators c-indicators c-indicators--lines">
+        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-label="S1"></button>
+        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="S2"></button>
+        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="S3"></button>
+      </div>
+
+      <div class="carousel-inner c-carousel__inner">
+
+        <div class="carousel-item active">
+          <div class="c-slide c-slide--fade1">
+            <div class="c-slide__overlay c-slide__overlay--heavy"></div>
+            <div class="carousel-caption c-caption c-caption--center">
+              <span class="c-caption__tag">HTML</span>
+              <h3>Estructura</h3>
+              <p>La base de toda página web: elementos semánticos, accesibles y bien estructurados.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="c-slide c-slide--fade2">
+            <div class="c-slide__overlay c-slide__overlay--heavy"></div>
+            <div class="carousel-caption c-caption c-caption--center">
+              <span class="c-caption__tag">CSS</span>
+              <h3>Estilo</h3>
+              <p>Variables, animaciones, Grid, Flexbox y diseño responsivo para interfaces modernas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="c-slide c-slide--fade3">
+            <div class="c-slide__overlay c-slide__overlay--heavy"></div>
+            <div class="carousel-caption c-caption c-caption--center">
+              <span class="c-caption__tag">JavaScript</span>
+              <h3>Interacción</h3>
+              <p>DOM, eventos, APIs del navegador y lógica de negocio para interfaces dinámicas.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev c-ctrl" type="button"
+              data-bs-target="#carousel2" data-bs-slide="prev">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-left"></i></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next c-ctrl" type="button"
+              data-bs-target="#carousel2" data-bs-slide="next">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-right"></i></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+
+    </div>
+  </section>
+
+  <section class="carousel-section" id="thumbs">
+    <div class="section-label">
+      <span class="section-num">03</span>
+      <div>
+        <h4>Con Miniaturas</h4>
+        <p>
+          Miniaturas de navegación sincronizadas con el carrusel
+          usando el evento JavaScript <code>slide.bs.carousel</code> de Bootstrap.
+          El slide activo resalta la miniatura correspondiente.
+        </p>
+      </div>
+    </div>
+
+    <div id="carousel3" class="carousel slide c-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+
+      <div class="carousel-inner c-carousel__inner">
+        <div class="carousel-item active">
+          <div class="c-slide c-slide--1">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">01</span>
+              <h3>Bootstrap 5</h3>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="c-slide c-slide--3">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">02</span>
+              <h3>Componentes UI</h3>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="c-slide c-slide--5">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">03</span>
+              <h3>Sass &amp; Variables</h3>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="c-slide c-slide--2">
+            <div class="c-slide__overlay"></div>
+            <div class="carousel-caption c-caption">
+              <span class="c-caption__tag">04</span>
+              <h3>Grid System</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev c-ctrl" type="button"
+              data-bs-target="#carousel3" data-bs-slide="prev">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-left"></i></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next c-ctrl" type="button"
+              data-bs-target="#carousel3" data-bs-slide="next">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-right"></i></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <div class="c-thumbs" id="thumbsRow3"></div>
+
+  </section>
+
+  <section class="carousel-section" id="cards">
+    <div class="section-label">
+      <span class="section-num">04</span>
+      <div>
+        <h4>Carrusel de Tarjetas</h4>
+        <p>
+          Carrusel multi-item construido con Bootstrap Grid dentro del
+          <code>carousel-item</code>. Muestra 3 tarjetas en desktop,
+          2 en tablet y 1 en móvil usando <code>col-12 col-sm-6 col-md-4</code>.
+        </p>
+      </div>
+    </div>
+
+    <div id="carousel4" class="carousel slide c-carousel--cards" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="c-card-item" style="background:linear-gradient(135deg,#1e1b4b,#7c3aed)">
+                <span class="c-card-item__emoji">🎯</span>
+                <h5>Taller 7</h5>
+                <p>Bootstrap Responsivo y Componentes</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-none d-sm-block">
+              <div class="c-card-item" style="background:linear-gradient(135deg,#064e3b,#10b981)">
+                <span class="c-card-item__emoji">📐</span>
+                <h5>Grid System</h5>
+                <p>12 columnas para diseño responsivo</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-none d-md-block">
+              <div class="c-card-item" style="background:linear-gradient(135deg,#7f1d1d,#ef4444)">
+                <span class="c-card-item__emoji">🎨</span>
+                <h5>Personalización</h5>
+                <p>Sass y variables CSS para estilos propios</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="c-card-item" style="background:linear-gradient(135deg,#0c2461,#3742fa)">
+                <span class="c-card-item__emoji">⚡</span>
+                <h5>Sin jQuery</h5>
+                <p>JavaScript nativo moderno en Bootstrap 5</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-none d-sm-block">
+              <div class="c-card-item" style="background:linear-gradient(135deg,#78350f,#f59e0b)">
+                <span class="c-card-item__emoji">🔧</span>
+                <h5>Utilidades CSS</h5>
+                <p>Clases de espaciado, color, tipografía y más</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-none d-md-block">
+              <div class="c-card-item" style="background:linear-gradient(135deg,#3d0a3f,#9333ea)">
+                <span class="c-card-item__emoji">🧩</span>
+                <h5>Componentes</h5>
+                <p>Modal, Toast, Carousel, Accordion y más</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev c-ctrl c-ctrl--dark" type="button"
+              data-bs-target="#carousel4" data-bs-slide="prev">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-left"></i></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next c-ctrl c-ctrl--dark" type="button"
+              data-bs-target="#carousel4" data-bs-slide="next">
+        <span class="c-ctrl__icon"><i class="bi bi-chevron-right"></i></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <strong>Exercise 3</strong> — Carrusel de Imágenes · Taller 7 · Andrés Felipe Ramírez Correa
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="exercise3.js"></script>
+</body>
+</html>

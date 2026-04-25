@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 2 — Componentes | Taller 7</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="exercise2.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-bootstrap-fill me-2"></i>Taller 7 · <span>Exercise 2</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav2" aria-controls="nav2" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav2">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#c1">Badges</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c2">Alerts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c3">Buttons</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c4">Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c5">Progress</a></li>
+        <li class="nav-item"><a class="nav-link" href="#c6">Accordion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero fade-up">
+  <div class="container">
+    <span class="hero-tag">Ejercicio 2</span>
+    <h1>6 Componentes <span>Personalizados</span></h1>
+    <p>Componentes de Bootstrap con estilos CSS propios aplicados sobre el framework</p>
+  </div>
+</header>
+
+<main class="py-5">
+<div class="container">
+
+  <div class="comp-section" id="c1">
+    <div class="comp-section__label">
+      <span class="comp-num">01</span>
+      <div>
+        <h3>Badges</h3>
+        <p>
+          Clase base Bootstrap: <code>.badge</code><br>
+          Personalización: paleta de colores propia, fuente <code>Space Mono</code>,
+          forma píldora y variante con punto de estado animado.
+        </p>
+      </div>
+    </div>
+
+    <div class="comp-section__demo">
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Variantes de color</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge c-badge c-badge--primary">Bootstrap</span>
+          <span class="badge c-badge c-badge--success">Activo</span>
+          <span class="badge c-badge c-badge--warning">Pendiente</span>
+          <span class="badge c-badge c-badge--danger">Error</span>
+          <span class="badge c-badge c-badge--info">Nuevo</span>
+          <span class="badge c-badge c-badge--dark">Inactivo</span>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Con íconos</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge c-badge c-badge--primary"><i class="bi bi-star-fill me-1"></i>Destacado</span>
+          <span class="badge c-badge c-badge--success"><i class="bi bi-check-circle me-1"></i>Verificado</span>
+          <span class="badge c-badge c-badge--danger"><i class="bi bi-shield-x me-1"></i>Bloqueado</span>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Estado con punto animado</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge c-badge c-badge--online"><span class="status-dot"></span>En línea</span>
+          <span class="badge c-badge c-badge--away"><span class="status-dot status-dot--away"></span>Ausente</span>
+          <span class="badge c-badge c-badge--offline"><span class="status-dot status-dot--off"></span>Desconectado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-section" id="c2">
+    <div class="comp-section__label">
+      <span class="comp-num">02</span>
+      <div>
+        <h3>Alerts</h3>
+        <p>
+          Clase base Bootstrap: <code>.alert</code><br>
+          Personalización: borde izquierdo de color, fondo translúcido,
+          ícono integrado. La clase <code>.alert-dismissible</code> + <code>data-bs-dismiss</code>
+          permite cerrar el alert con JavaScript de Bootstrap.
+        </p>
+      </div>
+    </div>
+
+    <div class="comp-section__demo" id="alertsDemo">
+      <div class="alert c-alert c-alert--success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <strong>¡Éxito!</strong> Los cambios se guardaron correctamente.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="alert c-alert c-alert--danger alert-dismissible fade show" role="alert">
+        <i class="bi bi-x-circle-fill me-2"></i>
+        <strong>Error:</strong> No se pudo completar la operación. Intenta de nuevo.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="alert c-alert c-alert--warning alert-dismissible fade show" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <strong>Atención:</strong> Tu sesión expirará en 5 minutos.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="alert c-alert c-alert--info alert-dismissible fade show" role="alert">
+        <i class="bi bi-info-circle-fill me-2"></i>
+        <strong>Información:</strong> Hay una nueva versión de Bootstrap disponible.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+      </div>
+
+      <button class="btn btn-primary-custom btn-sm mt-2" id="resetAlerts">
+        <i class="bi bi-arrow-counterclockwise me-1"></i>Restaurar alerts
+      </button>
+    </div>
+  </div>
+
+  <div class="comp-section" id="c3">
+    <div class="comp-section__label">
+      <span class="comp-num">03</span>
+      <div>
+        <h3>Buttons</h3>
+        <p>
+          Clase base Bootstrap: <code>.btn</code><br>
+          Personalización: gradientes, efecto de elevación en hover,
+          variante outline con animación de relleno, botón con ripple.
+        </p>
+      </div>
+    </div>
+
+    <div class="comp-section__demo">
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Variantes sólidas</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn c-btn c-btn--primary">Primario</button>
+          <button class="btn c-btn c-btn--success">Éxito</button>
+          <button class="btn c-btn c-btn--danger">Peligro</button>
+          <button class="btn c-btn c-btn--dark">Oscuro</button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Variantes outline y ghost</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn c-btn c-btn--outline">Outline</button>
+          <button class="btn c-btn c-btn--ghost">Ghost</button>
+          <button class="btn c-btn c-btn--link">Link <i class="bi bi-arrow-right-short"></i></button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Con íconos y tamaños</h6>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <button class="btn c-btn c-btn--primary c-btn--lg">
+            <i class="bi bi-download me-2"></i>Grande
+          </button>
+          <button class="btn c-btn c-btn--primary">Normal</button>
+          <button class="btn c-btn c-btn--primary c-btn--sm">Pequeño</button>
+          <button class="btn c-btn c-btn--icon" title="Favorito">
+            <i class="bi bi-heart-fill"></i>
+          </button>
+          <button class="btn c-btn c-btn--icon c-btn--icon--danger" title="Eliminar">
+            <i class="bi bi-trash3-fill"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h6 class="demo-subtitle">Estado loading</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn c-btn c-btn--primary" disabled>
+            <span class="spinner-border spinner-border-sm me-2" role="status"></span>Cargando...
+          </button>
+          <button class="btn c-btn c-btn--success" id="loadBtn">
+            Simular carga
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-section" id="c4">
+    <div class="comp-section__label">
+      <span class="comp-num">04</span>
+      <div>
+        <h3>Cards</h3>
+        <p>
+          Clase base Bootstrap: <code>.card</code><br>
+          Personalización: tres variantes — producto, perfil y horizontal.
+          Efecto hover de elevación con sombra y borde de color.
+        </p>
+      </div>
+    </div>
+
+    <div class="comp-section__demo">
+      <div class="row g-3">
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card c-card c-card--product">
+            <div class="c-card__cover" style="background:linear-gradient(135deg,#1e1b4b,#7c3aed)">
+              <span>🎧</span>
+            </div>
+            <div class="card-body">
+              <span class="badge c-badge c-badge--primary mb-2">Tech</span>
+              <h5 class="card-title">AirBeats Pro</h5>
+              <p class="card-text">Auriculares inalámbricos con cancelación activa de ruido y 40h de batería.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong class="c-card__price">$450.000</strong>
+                <button class="btn c-btn c-btn--primary c-btn--sm">
+                  <i class="bi bi-cart-plus me-1"></i>Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card c-card c-card--profile text-center">
+            <div class="c-card__profile-bg"></div>
+            <div class="card-body">
+              <div class="c-card__avatar">AF</div>
+              <h5 class="card-title mt-3 mb-0">Andrés Felipe</h5>
+              <p class="text-muted small mb-2">Desarrollador Frontend</p>
+              <div class="d-flex justify-content-center gap-2 mb-3">
+                <span class="badge c-badge c-badge--primary">HTML</span>
+                <span class="badge c-badge c-badge--info">CSS</span>
+                <span class="badge c-badge c-badge--warning">JS</span>
+              </div>
+              <div class="d-grid">
+                <button class="btn c-btn c-btn--outline">Ver perfil</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="card c-card c-card--horizontal">
+            <div class="row g-0 h-100">
+              <div class="col-4">
+                <div class="c-card__h-thumb" style="background:linear-gradient(135deg,#064e3b,#10b981)">
+                  🎵
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="card-body d-flex flex-column justify-content-between h-100">
+                  <div>
+                    <span class="badge c-badge c-badge--success mb-1">Música</span>
+                    <h6 class="card-title mb-1">Neon Dreams EP</h6>
+                    <p class="card-text small">Nuevo álbum disponible en todas las plataformas digitales.</p>
+                  </div>
+                  <button class="btn c-btn c-btn--success c-btn--sm">
+                    <i class="bi bi-play-fill me-1"></i>Escuchar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-section" id="c5">
+    <div class="comp-section__label">
+      <span class="comp-num">05</span>
+      <div>
+        <h3>Progress Bars</h3>
+        <p>
+          Clase base Bootstrap: <code>.progress</code> + <code>.progress-bar</code><br>
+          Personalización: colores por tecnología, altura reducida (8px),
+          animación de entrada con IntersectionObserver y etiqueta de porcentaje.
+        </p>
+      </div>
+    </div>
+
+    <div class="comp-section__demo">
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <h6 class="demo-subtitle">Habilidades técnicas</h6>
+
+          <div class="prog-item" data-target="92">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="prog-label"><i class="bi bi-filetype-html me-1"></i>HTML5</span>
+              <span class="prog-pct">92%</span>
+            </div>
+            <div class="progress c-progress">
+              <div class="progress-bar c-prog--html" role="progressbar"
+                   style="width:0%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="prog-item" data-target="85">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="prog-label"><i class="bi bi-filetype-css me-1"></i>CSS3</span>
+              <span class="prog-pct">85%</span>
+            </div>
+            <div class="progress c-progress">
+              <div class="progress-bar c-prog--css" role="progressbar"
+                   style="width:0%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="prog-item" data-target="70">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="prog-label"><i class="bi bi-filetype-js me-1"></i>JavaScript</span>
+              <span class="prog-pct">70%</span>
+            </div>
+            <div class="progress c-progress">
+              <div class="progress-bar c-prog--js" role="progressbar"
+                   style="width:0%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="prog-item" data-target="80">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="prog-label"><i class="bi bi-bootstrap me-1"></i>Bootstrap</span>
+              <span class="prog-pct">80%</span>
+            </div>
+            <div class="progress c-progress">
+              <div class="progress-bar c-prog--bs" role="progressbar"
+                   style="width:0%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h6 class="demo-subtitle">Variantes de estilo</h6>
+
+          <div class="mb-3">
+            <small class="text-muted">Striped + animado (Bootstrap nativo)</small>
+            <div class="progress c-progress mt-1">
+              <div class="progress-bar progress-bar-striped progress-bar-animated c-prog--bs"
+                   role="progressbar" style="width:65%"
+                   aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <small class="text-muted">Múltiples segmentos (stacked)</small>
+            <div class="progress c-progress mt-1" style="height:14px">
+              <div class="progress-bar c-prog--html" style="width:35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">HTML</div>
+              <div class="progress-bar c-prog--css"  style="width:25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CSS</div>
+              <div class="progress-bar c-prog--js"   style="width:20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">JS</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <small class="text-muted">Barra gruesa personalizada</small>
+            <div class="progress mt-1" style="height:22px;border-radius:11px;background:rgba(124,58,237,0.08)">
+              <div class="progress-bar c-prog--bs" role="progressbar"
+                   style="width:78%;border-radius:11px;font-size:0.75rem;font-weight:700"
+                   aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">78% Bootstrap</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comp-section" id="c6">
+    <div class="comp-section__label">
+      <span class="comp-num">06</span>
+      <div>
+        <h3>Accordion</h3>
+        <p>
+          Clase base Bootstrap: <code>.accordion</code><br>
+          <code>data-bs-toggle="collapse"</code> → Bootstrap colapsa/expande
+          automáticamente con su JS integrado.<br>
+          <code>data-bs-parent</code> → cierra los otros items al abrir uno.<br>
+          Personalización: cabecera con gradiente, ícono de flecha rotada en CSS.
+        </p>
+      </div>
+    </div>
+
+    <div class="comp-section__demo">
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6">
+          <h6 class="demo-subtitle">FAQ Bootstrap</h6>
+          <div class="accordion c-accordion" id="faqAcc">
+
+            <div class="accordion-item c-acc-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button c-acc-btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq1"
+                        aria-expanded="true" aria-controls="faq1">
+                  <i class="bi bi-patch-question me-2"></i>¿Qué es Bootstrap?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                <div class="accordion-body c-acc-body">
+                  Bootstrap es un framework front-end de código abierto creado originalmente por Twitter, que facilita el desarrollo de interfaces web responsivas y atractivas.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item c-acc-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button c-acc-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq2"
+                        aria-expanded="false" aria-controls="faq2">
+                  <i class="bi bi-grid me-2"></i>¿Qué es el Grid System?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body c-acc-body">
+                  El Grid System divide la pantalla en 12 columnas. Con las clases <code>col-{breakpoint}-{n}</code> se controla cuánto espacio ocupa un elemento en cada tamaño de pantalla.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item c-acc-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button c-acc-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq3"
+                        aria-expanded="false" aria-controls="faq3">
+                  <i class="bi bi-lightning me-2"></i>¿Bootstrap necesita jQuery?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body c-acc-body">
+                  No. Bootstrap 5 eliminó la dependencia de jQuery, usando JavaScript nativo moderno. Esto lo hace más ligero y rápido.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h6 class="demo-subtitle">Versiones de Bootstrap</h6>
+          <div class="accordion c-accordion c-accordion--dark" id="versAcc">
+
+            <div class="accordion-item c-acc-item c-acc-item--dark">
+              <h2 class="accordion-header">
+                <button class="accordion-button c-acc-btn c-acc-btn--dark" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#v5"
+                        aria-expanded="true" aria-controls="v5">
+                  <span class="c-acc-badge">v5</span>Bootstrap 5 (2021)
+                </button>
+              </h2>
+              <div id="v5" class="accordion-collapse collapse show" data-bs-parent="#versAcc">
+                <div class="accordion-body c-acc-body c-acc-body--dark">
+                  Eliminó jQuery, mejoró la documentación, añadió utilidades CSS extra y componentes como Offcanvas y Toasts mejorados.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item c-acc-item c-acc-item--dark">
+              <h2 class="accordion-header">
+                <button class="accordion-button c-acc-btn c-acc-btn--dark collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#v4"
+                        aria-expanded="false" aria-controls="v4">
+                  <span class="c-acc-badge c-acc-badge--muted">v4</span>Bootstrap 4 (2018)
+                </button>
+              </h2>
+              <div id="v4" class="accordion-collapse collapse" data-bs-parent="#versAcc">
+                <div class="accordion-body c-acc-body c-acc-body--dark">
+                  Introdujo Flexbox como base del grid, mejor tipografía, nuevos componentes y soporte completo para Sass.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item c-acc-item c-acc-item--dark">
+              <h2 class="accordion-header">
+                <button class="accordion-button c-acc-btn c-acc-btn--dark collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#v3"
+                        aria-expanded="false" aria-controls="v3">
+                  <span class="c-acc-badge c-acc-badge--muted">v3</span>Bootstrap 3 (2013)
+                </button>
+              </h2>
+              <div id="v3" class="accordion-collapse collapse" data-bs-parent="#versAcc">
+                <div class="accordion-body c-acc-body c-acc-body--dark">
+                  Primera versión <em>mobile-first</em>, rediseño completo del grid a 12 columnas y mejoras visuales generales.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <strong>Exercise 2</strong> — 6 Componentes Bootstrap · Taller 7 · Andrés Felipe Ramírez Correa
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="exercise2.js"></script>
+</body>
+</html>
