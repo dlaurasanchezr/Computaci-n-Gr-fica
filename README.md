@@ -1,34 +1,80 @@
-# 🔢 Taller VI: Lógica de Programación y Funciones en JS
+# 🔢 Taller VII: Bootstrap
 
-¡Bienvenido! Este repositorio contiene la resolución del **Taller VI**, enfocado en el dominio de algoritmos, estructuras de control y la modularización de código mediante funciones en **JavaScript**.
+---
 
-🚀 ## Contenido del Proyecto
+## 🚀 Ejercicios
 
-Este taller se centra en la manipulación lógica de datos numéricos y la creación de una arquitectura de software organizada, donde cada problema se resuelve a través de una función específica.
+### Exercise 1 — Responsive (Taller 4: Puntos 1 y 3)
+Se implementó diseño responsivo sobre los puntos 1 y 3 del Taller 4
+usando el **Grid System de Bootstrap 5**.
 
-📍 ## Puntos Resueltos:
+**Punto 1 — Login / Registro:**
+- Dos tarjetas (`col-12 col-md-6`): se apilan en móvil,
+  lado a lado en tablet/desktop
+- Formulario de registro con `input-group` y Font Awesome
+- Botones sociales (Facebook, Twitter, Correo)
 
-* **1. Números Perfectos:** Algoritmo para determinar si un número es igual a la suma de sus divisores propios.
-* **2. Paridad y Potencias:** Generación de secuencias de cuadrados y cubos dependiendo de si el número ingresado es par o impar.
-* **3. Inversión de Dígitos:** Descomposición matemática de números para invertirlos **sin utilizar funciones de string**.
-* **4. Verificador de Palíndromos:** Implementación lógica que reutiliza la función de inversión para validar simetría numérica.
-* **5. Rastreador de Dígitos:** Función que analiza la frecuencia de aparición de un dígito específico dentro de una cifra.
-* **6. Conversor a Binario:** Transformación de base decimal a binaria mediante lógica pura (divisiones sucesivas).
-* **7. Clasificador Multifuncional:** Una sola función que evalúa simultáneamente si un número es **PRIMO, PAR o IMPAR**.
-* **8. Menú de Usuario:** Interfaz interactiva construida con `while` y `switch` para navegar entre todos los ejercicios.
+**Punto 3 — Interfaz MusicFlow:**
+- Grid responsivo con `row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4`
+- Barra de búsqueda, categorías con tabs y player fijo en la parte inferior
+- El player se adapta: controles ocultos en móvil, visibles en desktop
 
-🛠️ ## Tecnologías Utilizadas
+---
 
-* **HTML5** (Estructura de la interfaz para cada ejercicio)
-* **JavaScript (Vanilla)** (Lógica, algoritmos y manipulación del DOM)
-* **CSS3** (Estilos y diseño de los componentes)
+### Exercise 2 — 6 Componentes Bootstrap Personalizados
 
-📂 ## Estructura de Archivos
+| # | Componente | Personalización aplicada |
+|---|---|---|
+| 1 | **Badges** | Paleta de colores propia, fuente monoespaciada, punto de estado animado |
+| 2 | **Alerts** | Borde lateral de color, fondo translúcido, botón de cierre funcional |
+| 3 | **Buttons** | 6 variantes con gradientes, efecto hover de elevación y estado loading |
+| 4 | **Cards** | 3 variantes: producto, perfil y horizontal con hover animado |
+| 5 | **Progress** | Colores por tecnología, altura 8px, animación al entrar al viewport |
+| 6 | **Accordion** | Variante clara y oscura, ícono de flecha personalizado con CSS |
 
-* **TallerVI/**: Carpeta principal que contiene los ejercicios.
-* **exercise[1-8].html**: Las interfaces visuales para interactuar con cada punto.
-* **exercise[1-8].js**: La lógica y las funciones independientes de cada desafío.
-* **styles.css**: Hoja de estilos compartida para una experiencia visual cohesiva.
+---
+
+### Exercise 3 — Carrusel de Imágenes Personalizado
+
+Se implementaron **4 variantes** del componente Carousel de Bootstrap:
+
+1. **Principal** — Transición deslizante con barra de tiempo,
+   botón play/pause y contador de slide
+2. **Fade** — Transición de fundido (`carousel-fade`),
+   indicadores en forma de línea
+3. **Con miniaturas** — Miniaturas sincronizadas usando el evento
+   `slid.bs.carousel` de Bootstrap JS
+4. **De tarjetas** — Carrusel multi-item con Grid dentro del
+   `carousel-item`, responsivo con `col-12 col-sm-6 col-md-4`
+
+---
+
+## 🛠️ Tecnologías usadas
+- HTML5
+- CSS3 (Variables CSS, Flexbox, Grid, Animaciones)
+- JavaScript ES6+ (IntersectionObserver, API Bootstrap JS)
+- Bootstrap 5.3.3
+- Bootstrap Icons 1.11.3
+- Font Awesome 5.7.2
+- Google Fonts (Poppins, Space Mono)
+
+---
+
+## ▶️ Cómo ejecutar
+1. Clonar el repositorio:
+```bash
+   git clone https://github.com/TU_USUARIO/taller7-bootstrap.git
+```
+2. Abrir cualquiera de los archivos `.html` en el navegador
+   o usar la extensión **Live Server** de VS Code
+
+---
+
+## 📸 Vistas previas
+
+| Exercise 1 | Exercise 2 | Exercise 3 |
+|---|---|---|
+| Login + MusicFlow | 6 Componentes | 4 Carruseles |
 
 ✍️ ## Autor
 
